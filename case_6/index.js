@@ -26,3 +26,4 @@ promesa10
 .then((dinero)=>{
     console.log("El cajero me dió:", dinero);
 });
+

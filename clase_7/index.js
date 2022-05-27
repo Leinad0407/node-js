@@ -35,6 +35,9 @@ function pintar(muro){
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
             muro.pintado = true;
+            if(muro.construido != true || muro.aplanado != true){
+                reject("No se pudo pintar el muro")
+            }
             resolve(muro);
         }, 100);
     })
@@ -63,15 +66,26 @@ promesaConstruir.then((muroConstruido)=>{
 .then((muroPintado)=>{
     console.log("Muro en tercer then:", muroPintado);
     console.log("Terminamos el muro!")
+})
+.catch((error)=>{
+    console.log("Un error!", error)
 });
 
-
+/****************************************************************************************/
 async function ordenarConstruccion(){
-    const muroConstruido = await construir(muro);
-    const muroAplanado = await aplanar(muroConstruido);
-    const muroPintado = await pintar(muroAplanado);
 
-    console.log("Se terminó el muro!", muroPintado);
+    try{
+
+   await construir(muro);
+   await aplanar(muro);
+   await pintar(muro);
+
+   console.log("Se terminó el muro!", muro)
+} catch(error){
+    console.error('En el catch hay otro error!', error)
+}
+
+    console.log("El programa sigue vivo !");
 }
 
 ordenarConstruccion();

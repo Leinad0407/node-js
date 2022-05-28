@@ -24,7 +24,7 @@ async function leerCarpeta(nombre){
 async function abriCarpeta(nombre){
     try{
         await appendFile(nombre);
-        console.log(`El archivo ${nombre} fue leido`)
+        console.log(`El archivo ${nombre} fue abierto`)
     } catch (error){
         console.error("No se encontró el archivo")
         console.error(error);
@@ -45,7 +45,7 @@ async function test(){
     await crearCarpeta("prueba");
     await leerCarpeta("prueba");
     await abriCarpeta("prueba");
-    //await borrarCarpeta("prueba");
+    await borrarCarpeta("prueba");
   
 }
 test()

@@ -4,9 +4,20 @@ const http = require("http") //nos trae todo el paquete de http
 
 const server = http.createServer((request, response)=>{
     //Vamos a responder al cliente
-    console.log("URL:", request.url) //Nos va a imprimir la URL de la peticion que realizamos
+    const respuesta1 = request.url //Nos va a imprimir la URL de la peticion que realizamos
     console.log("Metodo:", request.method) //Metodo de la peticion 
-    response.write("Hola desde mi server!"); //Escribimos la respuesta
+
+    if(respuesta1=="/koder"){
+        response.write("Aquí solo hay un koder!"); //Escribimos la respuesta
+    }
+    if(respuesta1=="/koders"){
+        response.write("Aqui estan todos los koders!"); //Escribimos la respuesta
+    }
+    
+    if(respuesta1!="/koder" & respuesta1!="/koders"){
+        response.write("no se que hacer, aiuda"); //Escribimos la respuesta
+    }
+
     response.end(); //cerramos o detenemos la respuesta, terminamos la respuesta y la enviamos
 });
 

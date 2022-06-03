@@ -74,6 +74,10 @@ const newObject = {
   res.json(koders);
 });
 
+server.get("/koders/:nombre", async(req, res)={
+  
+})
+
 
 server.delete("/koders/:nombre", async(req, res) = {
   const nombre = req.params.nombre;

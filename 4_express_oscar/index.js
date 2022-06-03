@@ -1,6 +1,8 @@
 const express = require("express");
 const fs = require("fs/promises");
 
+const PORT=8000;
+
 const server = express();
 
 // middleware para convertir request a JSON
@@ -13,7 +15,34 @@ server.get("/", (request, response) => {
 server.get("/koders", async (req, res) => {
   const koders = await readKoders(); // accedemos solo a los koders que estan en un arreglo
 
-  res.json(koders);
+  const edad = parseInt(req.query.edad) ; // accedemo a parametros 
+  const count = parseInt(req.query.count) ;
+
+  /*
+  [10, 10, 20, 20, 20, 10]
+
+  edad = 20 & count = 4
+
+  [10, 10, 20, 20]
+  [20, 20]
+
+  //Si aplicamos edad primero 
+
+  [20, 20, 20, 20]
+  [20, 20, 20, 20]
+
+  */
+ let respuesta = koders
+  if(!Number.isNaN(edad)){
+    respuesta = koders.filter((koder)=>koder.edad===edad); //todos los koders que tengan la edad buscada
+
+  }
+
+  if (!Number.isNaN(count)){
+    respuesta = respuesta.slice(0, count)
+  }
+
+  res.json(respuesta);
 });
 
 server.post("/koders", async (req, res) => {

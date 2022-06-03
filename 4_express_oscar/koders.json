@@ -1,0 +1,24 @@
+{
+  "koders": [
+    {
+      "nombre": "Danny",
+      "edad": 15,
+      "genero": "masculino"
+    },
+    {
+      "nombre": "Nestor",
+      "edad": 16,
+      "genero": "masculino"
+    },
+    {
+      "nombre": "Chucho",
+      "edad": 11,
+      "genero": "masculino"
+    },
+    {
+      "nombre": "Alan",
+      "edad": 33,
+      "genero": "masculino"
+    }
+  ]
+}

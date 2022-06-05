@@ -2,12 +2,12 @@
   "name": "4_express",
   "version": "1.0.0",
   "description": "Intro to ExpressJS",
-  "main": "index.js",
+  "main": "indexejercicio.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "indexejercicio.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Osc4ar",
+  "author": " Daniel",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.16"

@@ -2,9 +2,9 @@
   "name": "4_express",
   "version": "1.0.0",
   "description": "Intro to ExpressJS",
-  "main": "lista_fs.js",
+  "main": "endpoint_lista.js",
   "scripts": {
-    "start": "lista_fs.js",
+    "start": "endpoint_lista.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": " Daniel",

@@ -1,17 +1,17 @@
 {
-  "name": "mongoose",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index2.js",
+  "name": "6_kodemiapi",
+  "version": "0.0.1",
+  "description": "Nuevo proyecto que contiene todo lo visto ",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon index2.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "Daniel",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "mongoose": "^6.3.6"
   },
   "devDependencies": {
